@@ -368,7 +368,7 @@
   </string-array>
 
   <!-- True if camera app should be pinned via Pinner Service -->
-  <bool name="config_pinnerCameraApp">true</bool>
+  <bool name="config_pinnerCameraApp">false</bool>
 
   <!-- If this is true, device supports Sustained Performance Mode. -->
   <bool name="config_sustainedPerformanceModeSupported">true</bool>
@@ -502,6 +502,10 @@
   <!--
     Misc
   -->
+
+  <!-- Allow the gesture power + volume up to change the ringer mode while the device
+       is interactive. -->
+  <bool name="config_volumeHushGestureEnabled">false</bool>
 
   <!-- Indicate whether the SD card is accessible without removing the battery. -->
   <bool name="config_batterySdCardAccessibility">true</bool>
