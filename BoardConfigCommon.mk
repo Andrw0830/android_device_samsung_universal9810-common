@@ -109,8 +109,11 @@ TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
-# Samsung hardware
-JAVA_SOURCE_OVERLAYS := com.samsung.hardware|hardware/samsung/samsunghw|**/*.java
+# Lineage hardware
+ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
+JAVA_SOURCE_OVERLAYS := \
+    org.lineageos.hardware|hardware/samsung/lineagehw|**/*.java
+endif
 
 # Inherit from the proprietary version
 -include vendor/samsung/universal9810-common/BoardConfigVendor.mk

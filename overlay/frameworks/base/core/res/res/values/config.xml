@@ -22,34 +22,6 @@
   <!-- Button backlight brightness -->
   <integer name="config_buttonBrightnessSettingDefault">0</integer>
 
-  <!-- Hardware keys present on the device, stored as a bit field.
-    This integer should equal the sum of the corresponding value for each
-    of the following keys present:
-    1 - Home
-    2 - Back
-    4 - Menu
-    8 - Assistant (search)
-    16 - App switch
-    32 - Camera
-    64 - Volume rocker
-    For example, a device with Home, Back and Menu keys would set this
-    config to 7. -->
-  <integer name="config_deviceHardwareKeys">73</integer>
-
-  <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
-    This integer should equal the sum of the corresponding value for each
-    of the following keys present:
-    1 - Home
-    2 - Back
-    4 - Menu
-    8 - Assistant (search)
-    16 - App switch
-    32 - Camera
-    64 - Volume rocker
-    For example, a device with Home, Back and Menu keys would set this
-    config to 7. -->
-  <integer name="config_deviceHardwareWakeKeys">73</integer>
-
   <!--
     Cellular
   -->
@@ -187,9 +159,6 @@
 
   <!-- Does the device support smart pixels? -->
   <bool name="config_enableSmartPixels">true</bool>
-
-  <!-- Whether device has a screen with a higher aspect ratio -->
-  <bool name="config_haveHigherAspectRatioScreen">true</bool>
 
   <!-- Enable Night display, which requires HWC 2.0. -->
   <bool name="config_nightDisplayAvailable">true</bool>
@@ -340,19 +309,6 @@
 
   <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
   <bool name="config_intrusiveNotificationLed">true</bool>
-
-  <!-- All the capabilities of the LEDs on this device, stored as a bit field.
-    This integer should equal the sum of the corresponding value for each
-    of the following capabilities present:
-    LIGHTS_RGB_NOTIFICATION_LED = 1
-    LIGHTS_RGB_BATTERY_LED = 2
-    LIGHTS_MULTIPLE_NOTIFICATION_LED = 4
-    LIGHTS_PULSATING_LED = 8
-    LIGHTS_SEGMENTED_BATTERY_LED = 16
-    LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS = 32
-    For example, a device support pulsating, RGB notification and
-    battery LEDs would set this config to 11. -->
-  <integer name="config_deviceLightCapabilities">75</integer>
 
   <!--
     System
